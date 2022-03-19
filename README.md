@@ -19,3 +19,5 @@ Source des données : https://www.kaggle.com/c/home-credit-default-risk/data
 * Présenter son travail de modélisation à l'oral
 * Déployer un modèle via une API dans le Web
 * Utiliser un logiciel de version de code pour assurer l’intégration du modèle
+
+Application disponible ici: https://home-credit-st.herokuapp.com/
