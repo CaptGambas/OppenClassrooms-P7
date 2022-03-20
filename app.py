@@ -94,7 +94,7 @@ with feature_imp :
         ]
 
     df_feat_imp = df
-    st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **accepté refusé** (poids les plus grand dans la décision)')
+    st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **accepté ou refusé** (poids les plus grand dans la décision)')
     df_pos = df_feat_imp.loc[df_feat_imp.index == int(id_client)][var_pos].transpose()
     st.write(df_pos)
     #st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **accepté**')
