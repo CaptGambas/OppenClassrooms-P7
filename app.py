@@ -78,11 +78,11 @@ with info_comp :
 with result_ml :
     st.header('''Résultat de la demande de crédit''')
     per_pos = model.predict_proba(df_model.loc[df_model.index == int(id_client)])[0][1]
-    if per_pos < 0.5119 :
+    if per_pos < 0.51229 :
         st.markdown("<p style=color:Green;font-weight:bold> Votre crédit est accepté</p>" , unsafe_allow_html=True)
     else :
         st.markdown("<p style=color:Red;font-weight:bold> Votre crédit est refusé</p>" , unsafe_allow_html=True)
-    st.write('Votre crédit est refusé si ce score est supérieur à 0.5119 : {}'.format(round(per_pos,3)))
+    st.write('Votre crédit est refusé si ce score est supérieur à 0.51229 : {}'.format(round(per_pos,3)))
 
 # Les variables les plus importantes dans la modélisation
 with feature_imp :
