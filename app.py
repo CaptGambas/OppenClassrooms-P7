@@ -36,7 +36,7 @@ id_client = st.sidebar.selectbox('Identifiant client', df_model.index)
 # Affichage du titre et des données relatives au client sélectionné
 with header :
     st.title('''Tableau de bord d'allocation de crédit client''' )
-    st.write(df_model)
+    #st.write(df_model)
 
 df_client = df.loc[df.index == int(id_client)].transpose()
 df_client.columns = ['Informations clients']
@@ -94,7 +94,7 @@ with feature_imp :
         ]
 
     df_feat_imp = df
-    st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **refusé** (poid les plus grand dans la décision)')
+    st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **accepté refusé** (poids les plus grand dans la décision)')
     df_pos = df_feat_imp.loc[df_feat_imp.index == int(id_client)][var_pos].transpose()
     st.write(df_pos)
     #st.subheader('Plus ces valeurs sont hautes, plus vous avez de chances que votre crédit soit **accepté**')
